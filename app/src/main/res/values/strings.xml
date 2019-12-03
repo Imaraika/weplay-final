@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Weplay</string>
+    <string-array name="select_sports">
+        <item>Bascketball</item>
+        <item>Volleyball</item>
+        <item>Football</item>
+        <item>Rugby</item>
+        <item>Tennis</item>
+        <item>Gym</item>
+        <item>child playground</item>
+    </string-array>
+
+    <array name="locations">
+        <item>Kicukiro</item>
+        <item>Nyarugenge</item>
+        <item>Gasabo</item>
+
+    </array>
+</resources>
