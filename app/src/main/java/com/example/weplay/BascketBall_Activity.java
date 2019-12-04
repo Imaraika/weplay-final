@@ -17,8 +17,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class BascketBall_Activity extends AppCompatActivity {
-    int[] IMAGES = {R.drawable.abakobwabako, R.drawable.basck, R.drawable.bako, R.drawable.basckbal2,
-            R.drawable.elitbako,R.drawable.abakobwabako, R.drawable.gisozibasck, R.drawable.bako, R.drawable.volleyball, R.drawable.volleball};
+    int[] IMAGES = {R.drawable.abakobwabako, R.drawable.abakobwabako, R.drawable.abakobwabako, R.drawable.abakobwabako,
+            R.drawable.abakobwabako,R.drawable.abakobwabako, R.drawable.basckbal2, R.drawable.basck, R.drawable.elitbako, R.drawable.volleball};
 
     String[] hsesRoad = {"707 Kicukiro Ave", "2206 gisz ruhango GD","2816 Beletoire Ave", "8227 Folcroft kigali", "9227 lene KK","707 Kicukiro Ave",
             "2206 gisz ruhango GD","2816 Beletoire Ave", "8227 Folcroft kigali", "9227 nyamirambo NY",};

@@ -38,17 +38,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int image [] ={R.drawable.bascketbal,R.drawable.allgamesandroid,R.drawable.bascketbal,R.drawable.allgames};
+        int image [] ={R.drawable.football,R.drawable.allgamesandroid,R.drawable.abakobwabako,R.drawable.allgames};
 
         models = new ArrayList<>();
-        models.add(new model(R.drawable.abakobwabako,"bascketball"));
-        models.add(new model(R.drawable.yoga3,"allballs"));
-        models.add(new model(R.drawable.yogachild,"allgames"));
+        models.add(new model(R.drawable.football,"bascketball"));
+        models.add(new model(R.drawable.allgames,"allballs"));
+        models.add(new model(R.drawable.allgames,"allgames"));
+        models.add(new model(R.drawable.allgames,"football"));
+        models.add(new model(R.drawable.allgames,"bascketball"));
+        models.add(new model(R.drawable.allgames,"allballs"));
+        models.add(new model(R.drawable.allgames,"allgames"));
         models.add(new model(R.drawable.football,"football"));
-        models.add(new model(R.drawable.abakobwabako,"bascketball"));
-        models.add(new model(R.drawable.bako,"allballs"));
-        models.add(new model(R.drawable.vv,"allgames"));
-        models.add(new model(R.drawable.kigalichild,"football"));
 
         adapter = new Adapter(models,this);
         viewPager = findViewById(R.id.pager);

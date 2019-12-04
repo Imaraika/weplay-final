@@ -13,7 +13,7 @@
 
     <TextView
         android:id="@+id/textView_Road"
-        android:layout_width="294dp"
+        android:layout_width="245dp"
         android:layout_height="49dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"

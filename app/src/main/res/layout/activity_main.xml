@@ -8,77 +8,81 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:id="@+id/linearLayout-header"
+        android:id="@+id/relative_header"
         android:layout_width="match_parent"
-        android:layout_height="234dp"
+        android:layout_height="160dp"
         android:background="@drawable/gradient"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="28dp">
 
-
-        <TextView
-            android:id="@+id/display_Location_TextView"
-            android:layout_width="212dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="45dp"
-            android:layout_marginEnd="57dp"
-            android:layout_marginRight="57dp"
-            android:text="Select Your Sport"
-            android:textAlignment="center"
-            android:textColor="@color/colorWhite"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/locationEditText"
-            android:layout_width="162dp"
-            android:layout_height="62dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="87dp"
-            android:background="@color/colorWhite"
-            android:textColor="@color/colorBlack" />
-
         <RelativeLayout
             android:id="@+id/relative_spinner"
-            android:layout_width="173dp"
-            android:layout_height="68dp"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
             android:layout_alignParentStart="false"
             android:layout_alignParentLeft="false"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
-            android:layout_marginRight="6dp"
+            android:layout_marginRight="0dp"
             android:background="@color/colorWhite">
 
+            <TextView
+                android:id="@+id/display_Location_TextView"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:text="Select Your Sport"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/locationEditText"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="26dp"
+                android:background="@color/colorWhite"
+                android:hint=" Your location "
+                android:textColor="@color/colorBlack" />
 
             <Spinner
                 android:id="@+id/spinner2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="-2dp" />
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="7dp"
+                android:entries="@array/select_sports" />
         </RelativeLayout>
 
         <Button
             android:id="@+id/searchbtn"
-            android:layout_width="206dp"
-            android:layout_height="58dp"
+            android:layout_width="118dp"
+            android:layout_height="20dp"
             android:layout_below="@id/relative_spinner"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="56dp"
-            android:layout_marginLeft="56dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginLeft="84dp"
+            android:layout_marginTop="6dp"
+            android:layout_centerInParent="true"
             android:background="@drawable/rounded_button"
-            android:text="Search" />
+            android:text="Search"
+            android:textSize="14dp"/>
 
 
     </RelativeLayout>
@@ -87,7 +91,7 @@
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="166dp"
-        android:layout_marginTop="232dp">
+       android:layout_below="@+id/relative_header">
 
         <TextView
             android:id="@+id/playgroundTextView"
@@ -99,7 +103,7 @@
             android:layout_marginTop="90dp"
             android:background="@drawable/gradient"
             android:padding="6dp"
-            android:text="Playground"
+            android:text="Activities"
             android:textAlignment="center"
             android:textColor="@color/colorWhite" />
 
@@ -117,7 +121,7 @@
         <ViewFlipper
             android:id="@+id/v_flipper"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:layout_marginTop="-22dp" />
     </RelativeLayout>
