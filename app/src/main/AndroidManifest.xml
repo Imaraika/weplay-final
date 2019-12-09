@@ -11,11 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".TeamActivity"></activity>
+        <activity android:name=".EventActivity" />
+        <activity android:name=".PostBlogActivity" />
+        <activity android:name=".DetailActivity" />
         <activity android:name=".Tennis_Activity" />
-        <activity android:name=".ListdataActivity">
-
-        </activity>
+        <activity android:name=".ListdataActivity" />
         <activity android:name=".CustomListViewActivity" />
         <activity android:name=".Gimy_Activity" />
         <activity android:name=".Rugby_Activity" />

@@ -1,59 +1,66 @@
 package com.example.weplay;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.viewpager.widget.PagerAdapter;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class Adapter extends PagerAdapter {
-    private List<model> models;
-    private LayoutInflater layoutInflater;
-    private Context context;
+public class Adapter extends RecyclerView.Adapter< GroundViewHolder > {
 
-    public Adapter(List<model> models, Context context) {
-        this.models = models;
-        this.context = context;
+
+    private Context mContext;
+    private List< PlaygroundData > mGroundList;
+
+    Adapter(Context mContext, List< PlaygroundData > mGroundList) {
+        this.mContext = mContext;
+        this.mGroundList = mGroundList;
+    }
+    @Override
+    public GroundViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item_row, parent, false);
+        return new GroundViewHolder(mView);
+    }
+    @Override
+    public void onBindViewHolder(final GroundViewHolder holder, int position) {
+        holder.mImage.setImageResource(mGroundList.get(position).getPlaygroundImage());
+        holder.mTitle.setText(mGroundList.get(position).getPlaygroundName());
+
+        holder.mCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intnt = new Intent(mContext,DetailActivity.class);
+                intnt.putExtra("Title", mGroundList.get(holder.getAdapterPosition()).getPlaygroundName());
+                intnt.putExtra("Description", mGroundList.get(holder.getAdapterPosition()).getPlaygroundDescription());
+                intnt.putExtra("Image", mGroundList.get(holder.getAdapterPosition()).getPlaygroundImage());
+                mContext.startActivity(intnt);
+            }
+        });
     }
 
     @Override
-    public int getCount() {
-        return models.size();
-    }
-
-    @Override
-    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view.equals(object);
-    }
-
-    @NonNull
-    @Override
-    public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        layoutInflater = LayoutInflater.from(context);
-
-        View view =layoutInflater.inflate(R.layout.item,container,false);
-        ImageView imageView;
-        TextView title;
-
-        imageView = view.findViewById(R.id.image);
-        title =view.findViewById(R.id.title1);
-
-        imageView.setImageResource(models.get(position).getImg());
-        title.setText(models.get(position).getTitle());
-
-        container.addView(view,0);
-        return view;
-    }
-
-    @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((View)object);
+    public int getItemCount() {
+        return mGroundList.size();
     }
 }
+class GroundViewHolder extends RecyclerView.ViewHolder {
 
+    ImageView mImage;
+    TextView mTitle;
+    CardView mCardView = itemView.findViewById(R.id.cardview);
+
+
+    GroundViewHolder(View itemView) {
+        super(itemView);
+
+        mImage = itemView.findViewById(R.id.ivImage);
+        mTitle = itemView.findViewById(R.id.tvTitle);
+    }
+}

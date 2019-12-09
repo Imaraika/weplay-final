@@ -10,139 +10,110 @@
     <RelativeLayout
         android:id="@+id/relative_header"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="152dp"
         android:background="@drawable/gradient"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="28dp">
+        <ImageView
+            android:id="@+id/mBackButton"
+            android:layout_width="52dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_action_back"/>
+
+        <TextView
+            android:id="@+id/textAppName"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="51dp"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="11dp"
+            android:text="Weplay"
+            android:textColor="@color/colorWhite" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginStart="256dp"
+            android:layout_marginLeft="256dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            app:srcCompat="@drawable/logo2" />
 
         <RelativeLayout
             android:id="@+id/relative_spinner"
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:layout_alignParentStart="false"
-            android:layout_alignParentLeft="false"
-            android:layout_alignParentRight="true"
+            android:layout_width="116dp"
+            android:layout_height="36dp"
+
+            android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginRight="0dp"
             android:background="@color/colorWhite">
 
             <TextView
-                android:id="@+id/display_Location_TextView"
-                android:layout_width="206dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="60dp"
-                android:layout_marginRight="60dp"
-                android:text="Select Your Sport"
-                android:textAlignment="center"
-                android:textColor="@color/colorBlack"
-                android:textSize="14dp" />
-
-
-            <TextView
                 android:id="@+id/locationEditText"
-                android:layout_width="112dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="1dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="26dp"
                 android:background="@color/colorWhite"
+                android:gravity="center"
                 android:hint=" Your location "
+                android:textAlignment="center"
                 android:textColor="@color/colorBlack" />
 
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="22dp"
-                android:layout_marginRight="7dp"
-                android:entries="@array/select_sports" />
         </RelativeLayout>
 
-        <Button
-            android:id="@+id/searchbtn"
-            android:layout_width="118dp"
-            android:layout_height="20dp"
-            android:layout_below="@id/relative_spinner"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="84dp"
-            android:layout_marginLeft="84dp"
-            android:layout_marginTop="6dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/rounded_button"
-            android:text="Search"
-            android:textSize="14dp"/>
-
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_below="@+id/relative_header"
+        android:gravity="center"
+        android:text="Sports Activities"
+        android:textColor="@color/colorBlack"
+        android:textSize="14dp" />
 
     <RelativeLayout
-        android:id="@+id/banner"
+        android:id="@+id/recycleRelative"
         android:layout_width="match_parent"
-        android:layout_height="166dp"
-       android:layout_below="@+id/relative_header">
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_alignTop="@+id/relative_header"
+        android:layout_marginTop="191dp">
 
-        <TextView
-            android:id="@+id/playgroundTextView"
-            android:layout_width="97dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="90dp"
-            android:background="@drawable/gradient"
-            android:padding="6dp"
-            android:text="Activities"
-            android:textAlignment="center"
-            android:textColor="@color/colorWhite" />
-
-        <TextView
-            android:id="@+id/textViewMsg"
-            android:layout_width="93dp"
-            android:layout_height="31dp"
-            android:layout_below="@+id/playgroundTextView"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="2dp"
-            android:text="Shooting Stars club"
-            android:textColor="@color/colorBlack"
-            android:textSize="24px" />
-
-        <ViewFlipper
-            android:id="@+id/v_flipper"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="-22dp" />
+
+            android:layout_marginBottom="0dp"
+            android:scrollbars="vertical" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="176dp"
-        android:layout_below="@id/banner"
-        android:layout_marginTop="19dp">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom2_nav_menu" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:foregroundGravity="left"
-            android:overScrollMode="never">
-
-        </androidx.viewpager.widget.ViewPager>
-
-
-    </RelativeLayout>
 
 </RelativeLayout>

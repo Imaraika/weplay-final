@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relative_header"
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
+        android:background="@drawable/gradient"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="28dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="0dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/display_Location_TextView"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginRight="60dp"
+                android:text="Select Your Sport"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/locationEditText"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorWhite"
+                android:hint=" Your location "
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="6dp"
+                android:entries="@array/select_sports"
+                android:textAlignment="center" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/searchbtn"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/relative_spinner"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center"
+            android:text="Search"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_header"
+        android:text="Sports Activities"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="@color/colorBlack"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/textViewTitle"/>
+
+</RelativeLayout>
