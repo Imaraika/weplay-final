@@ -15,40 +15,47 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="28dp">
-        <ImageView
-            android:id="@+id/mBackButton"
-            android:layout_width="52dp"
-            android:layout_height="25dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="12dp"
-            android:src="@drawable/ic_action_back"/>
 
-        <TextView
-            android:id="@+id/textAppName"
-            android:layout_width="200dp"
-            android:layout_height="36dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="51dp"
-            android:layout_marginLeft="51dp"
-            android:layout_marginTop="11dp"
-            android:text="Weplay"
-            android:textColor="@color/colorWhite" />
+        <include
+            android:id="@+id/toolbarOg"
+            layout="@layout/toolbar"
+            />
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="wrap_content"
-            android:layout_height="55dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+<!--        <ImageView-->
+<!--            android:id="@+id/mBackButton"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="37dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginLeft="0dp"-->
+<!--            android:src="@drawable/ic_action_back" />-->
 
-            android:layout_marginStart="256dp"
-            android:layout_marginLeft="256dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="0dp"
-            app:srcCompat="@drawable/logo2" />
+<!--        <TextView-->
+<!--            android:id="@+id/textAppName"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginStart="51dp"-->
+<!--            android:layout_marginLeft="51dp"-->
+<!--            android:layout_marginTop="11dp"-->
+<!--            android:text="Weplay"-->
+<!--            android:textColor="@color/colorWhite" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="55dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+
+<!--            android:layout_marginStart="256dp"-->
+<!--            android:layout_marginLeft="256dp"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:layout_marginRight="0dp"-->
+<!--            app:srcCompat="@drawable/logo2" />-->
 
         <RelativeLayout
             android:id="@+id/relative_spinner"
@@ -99,21 +106,23 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
 
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="0dp"
             android:scrollbars="vertical" />
     </RelativeLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/gradient"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
-        app:menu="@menu/bottom2_nav_menu" />
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@drawable/gradient"-->
+<!--        app:itemIconTint="@android:color/white"-->
+<!--        app:itemTextColor="@android:color/white"-->
+<!--        app:menu="@menu/bottom2_nav_menu" />-->
 
 
 </RelativeLayout>
